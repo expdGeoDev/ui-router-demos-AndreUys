@@ -1,0 +1,72 @@
+<div class="row">
+	<div class="col-3">
+		<ul class="list-unstyled">
+			<li>
+				Root routing by state
+				<ul class="mt-1 mb-1">
+					<li>
+						Absolute
+						<ul>
+							<li>
+								<a
+									uiSrefActive="active"
+									uiSref="conceptDemos.routeOne"
+								>
+									Route One
+								</a>
+							</li>
+							<li>
+								<a
+									uiSrefActive="active"
+									uiSref="conceptDemos.routeTwo"
+								>
+									Route Two
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						Relative
+						<ul>
+							<li>
+								<a
+									uiSrefActive="active"
+									uiSref=".routeOne"
+								>
+									Route One
+								</a>
+							</li>
+							<li>
+								<a
+									uiSrefActive="active"
+									uiSref=".routeTwo"
+								>
+									Route Two
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a
+					uiSrefActive="active"
+					uiSref=".urlParams"
+				>
+					Passing Parameters
+				</a>
+			</li>
+			<li>
+				<a
+					uiSrefActive="active"
+					uiSref=".programmaticRouting"
+				>
+					Programmatic Routing
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col">
+		<ui-view></ui-view>
+	</div>
+</div>

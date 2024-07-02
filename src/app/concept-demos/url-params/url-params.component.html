@@ -1,0 +1,222 @@
+<div class="row">
+	<div class="col-4">
+		<h3>Routing by parameters</h3>
+		<ul class="list-unstyled">
+			<li>
+				Basic Parameters
+				<ul>
+					<li>
+						<a
+							uiSref=".basic"
+							uiSrefActive="active"
+							[uiParams]="{ value: 'Hello' }"
+						>
+							Hello
+						</a>
+					</li>
+					<li>
+						<a
+							uiSref=".basic"
+							uiSrefActive="active"
+							[uiParams]="{ value: 'Good-bye' }"
+						>
+							Good-bye
+						</a>
+					</li>
+					<li>
+						<a
+							uiSref=".basic"
+							uiSrefActive="active"
+							[uiParams]="{ value: 6 }"
+						>
+							A number
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Query string Parameters
+				<ul>
+					<li>
+						<a
+							uiSref=".query"
+							uiSrefActive="active"
+							[uiParams]="{ value: 'Hello' }"
+						>
+							Hello
+						</a>
+					</li>
+					<li>
+						<a
+							uiSref=".query"
+							uiSrefActive="active"
+							[uiParams]="{ value: 'Good-bye' }"
+						>
+							Good-bye
+						</a>
+					</li>
+					<li>
+						<a
+							uiSref=".query"
+							uiSrefActive="active"
+							[uiParams]="{ value: 6 }"
+						>
+							A number
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Typed Parameters
+				<ul>
+					<li>
+						<a
+							uiSref=".typedString"
+							[uiParams]="{ stringValue: 'Clicked on the link' }"
+						>
+							String Value
+						</a>
+					</li>
+					<li>
+						<a
+							uiSref=".typedNumber"
+							[uiParams]="{ numericValue: 10 }"
+						>
+							Numeric (int) Value
+						</a>
+					</li>
+					<li>
+						Boolean
+						<a
+							uiSref=".typedBoolean"
+							[uiParams]="{ booleanValue: true }"
+						>
+							true
+						</a>
+						and
+						<a
+							uiSref=".typedBoolean"
+							[uiParams]="{ booleanValue: false }"
+						>
+							false
+						</a>
+					</li>
+					<li>
+						Date value
+						<a
+							uiSref=".typedDate"
+							[uiParams]="{ dateValue: today }"
+						>
+							from Date instance
+						</a>
+						or
+						<a
+							uiSref=".typedDate"
+							[uiParams]="{ dateValue: '2000-01-01' }"
+						>
+							from string
+						</a>
+					</li>
+					<li>
+						RegExp pattern
+						<a
+							uiSref=".typedPattern"
+							[uiParams]="{ patternValue: 'Match' }"
+						>
+							Match
+						</a>
+						or
+						<a
+							uiSref=".typedPattern"
+							[uiParams]="{ patternValue: 'Terrific' }"
+						>
+							Terrific
+						</a>
+						or
+						<a
+							uiSref=".typedPattern"
+							[uiParams]="{ patternValue: 'Excellent' }"
+						>
+							Excellent
+						</a>
+						but not
+						<a
+							uiSref=".typedPattern"
+							[uiParams]="{ patternValue: 'bad' }"
+						>
+							bad
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Resolved Parameters
+				<ul>
+					<li>
+						<a
+							uiSref=".resolved"
+							uiSrefActive="active"
+							[uiParams]="{ value: 'Hello' }"
+						>
+							Hello
+						</a>
+					</li>
+					<li>
+						<a
+							uiSref=".resolved"
+							uiSrefActive="active"
+							[uiParams]="{ value: 'Good-bye' }"
+						>
+							Good-bye
+						</a>
+					</li>
+					<li>
+						<a
+							uiSref=".resolved"
+							uiSrefActive="active"
+							[uiParams]="{ value: 6 }"
+						>
+							A number
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Async Resolved Parameters
+				<ul>
+					<li>
+						Good values:
+						<a
+							uiSref=".asyncResolved"
+							uiSrefActive="active"
+							[uiParams]="{ id: 1 }"
+						>
+							1
+						</a>
+						,
+						<a
+							uiSref=".asyncResolved"
+							uiSrefActive="active"
+							[uiParams]="{ id: 500 }"
+						>
+							500
+						</a>
+					</li>
+					<li>
+						Bad (out of range) value:
+						<a
+							uiSref=".asyncResolved"
+							uiSrefActive="active"
+							[uiParams]="{ id: 6000 }"
+						>
+							6000
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="col">
+		<ui-view></ui-view>
+	</div>
+</div>

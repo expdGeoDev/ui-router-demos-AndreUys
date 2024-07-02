@@ -1,0 +1,36 @@
+<div class="row">
+	<div class="col-4">
+		<div class="mb-2">
+			<p>Programmatic (imperative) routing</p>
+		</div>
+		<ul class="list-unstyled">
+			<li class="mb-2">
+				<a
+					href="#"
+					(click)="handleLinkClick($event)"
+				>
+					Route by link (demo one)
+				</a>
+			</li>
+			<li class="mb-2">
+				<button
+					class="btn btn-sm btn-primary"
+					(click)="handleButtonClick()"
+				>
+					Route by button
+				</button>
+			</li>
+			<li>
+				<a
+					href="#"
+					(click)="handleParamsClick($event, 5)"
+				>
+					Route with parameters
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col">
+		<ui-view></ui-view>
+	</div>
+</div>

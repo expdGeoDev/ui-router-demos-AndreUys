@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="col-3">
+		<ul class="list-unstyled">
+			<li>
+				Lazy routing by state
+				<ul>
+					<li>
+						Absolute
+						<ul>
+							<li><a uiSref="routingLazily.routeOne">Route One</a></li>
+							<li><a uiSref="routingLazily.routeTwo">Route Two</a></li>
+						</ul>
+					</li>
+					<li>
+						Relative
+						<ul>
+							<li><a uiSref=".routeOne">Route One</a></li>
+							<li><a uiSref=".routeTwo">Route Two</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="col">
+		<ui-view></ui-view>
+	</div>
+</div>
